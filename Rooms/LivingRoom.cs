@@ -31,7 +31,11 @@ Tu peux revenir dans ta [chambre].
 
                 case "chambre":
                     Console.WriteLine("Tu retourne dans ta chambre");
-                        Game.Transition<Bedroom>();
+                        Game.Transition<DevantBatiment>();
+                    break;
+
+                default:
+                    Console.WriteLine("Commande invalid.");
                     break;
             }
         }
