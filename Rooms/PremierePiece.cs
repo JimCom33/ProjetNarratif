@@ -16,13 +16,20 @@
             {
                 case "escaliers":
                     Console.WriteLine("Vous décidez de prendre les escaliers qui vous mène à l'étage du haut.");
-                    Game.Transition<LivingRoom>();
+                    Game.Transition<PremierEtage>();
                     break;
                 case "ascenceur":
-                    
+                    Console.WriteLine("");                    
                     break;
                 case "porte":
-
+                    if (isKeyCollected)
+                    {
+                        Console.WriteLine("Vous débarer la porte et entrer à l'interieur.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("La porte est barré.");
+                    }
                     break;
 
                 default:

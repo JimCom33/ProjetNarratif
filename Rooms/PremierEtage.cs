@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetNarratif.Rooms
 {
-    internal class LivingRoom : Room
+    internal class PremierEtage : Room
     {
         internal override string CreateDescription() =>
 @"Dans le salon, le [sofa] semble être confortable.
