@@ -9,9 +9,11 @@ namespace ProjetNarratif.Rooms
     internal class PremierEtage : Room
     {
         internal override string CreateDescription() =>
-@"Dans le salon, le [sofa] semble être confortable.
-La [tv] illumine faiblement la salle.
-Tu peux revenir dans ta [chambre].
+@"Vous vous retrouver devant un couloir sombre.
+Les lumieres clignotante.
+Plusieurs portes sont fermer, mais au bout du couloir semble avoir une [piece] avec une
+petite lumière.
+Vous pouvez aussi retourner en [bas].
 ";        
         
         
@@ -20,18 +22,16 @@ Tu peux revenir dans ta [chambre].
         {
             switch (choice)
             {
-                case "sofa":
-                    Console.WriteLine("Tu t'assie sur le sofa et tu est captiver par la lumière clignotante de la tv");
-                    break;
+                case "piece":
+                    Console.WriteLine("@Vous approchez de la piece sans faire de bruit..." +
+                        " vous trouver ce qui semble entre un gardien de sécurité mort... " +
+                        "la tête complètement dévoré.");
+                    Game.Transition<PieceEtage>();
+                    break;                
 
-                case "tv" :
-                    Console.WriteLine("Tu touche la tv et tu est aspirer dans un monde parallèle");
-                    Game.Finish();
-                    break;
-
-                case "chambre":
-                    Console.WriteLine("Tu retourne dans ta chambre");
-                        Game.Transition<DevantBatiment>();
+                case "bas":
+                    Console.WriteLine("Vous retournez en bas");
+                        Game.Transition<PremierePiece>();
                     break;
 
                 default:

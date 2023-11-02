@@ -27,9 +27,11 @@ Ou retourner en [bas].
                     break;
 
                 case "fenetre":
+                    Console.WriteLine("Vous tentez de sortir par la fenêtre mais elle est completement bloqué.");
                     break;
 
                 case "bas":
+                    Console.WriteLine("Vous sortez de la piece en courrant et retournez en bas.");
                     break;
 
                 default:
