@@ -24,6 +24,7 @@ Ou retourner en [bas].
             switch (choice)
             {
                 case "garde":
+                    Console.WriteLine(@"Rien de spécial sur le garde... seulement sa tête qui a été complètement manger par quelque chose ou quelqu'un...?");
                     break;
 
                 case "fenetre":
