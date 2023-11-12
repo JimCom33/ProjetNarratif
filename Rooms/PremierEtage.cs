@@ -23,7 +23,7 @@ Vous pouvez aussi retourner en [bas].
             switch (choice)
             {
                 case "piece":
-                    Console.WriteLine("@Vous approchez de la piece sans faire de bruit..." +
+                    Console.WriteLine("Vous approchez de la piece sans faire de bruit..." +
                         " vous trouver ce qui semble entre un gardien de sécurité mort... " +
                         "la tête complètement dévoré.");
                     Game.Transition<PieceEtage>();
