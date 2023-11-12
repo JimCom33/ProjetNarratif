@@ -32,6 +32,7 @@ Ou retourner en [bas].
 
                 case "bas":
                     Console.WriteLine("Vous sortez de la piece en courrant et retournez en bas.");
+                    Game.Transition<PremierePiece>();
                     break;
 
                 default:
