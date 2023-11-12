@@ -24,7 +24,7 @@ Vous pouvez tenter le code.
                     Console.WriteLine("Vous prenez le telephone. En dessous se trouve une note avec écrit : 4189280181");
                     break;
                 case "4189280181":
-                    Console.WriteLine("@Vous avez réussi à arreter l'alarme. Puisque la porte s'est refermer et qu'il est impossible de l'ouvrir, vous vous " +
+                    Console.WriteLine("Vous avez réussi à arreter l'alarme. Puisque la porte s'est refermer et qu'il est impossible de l'ouvrir, vous vous " +
                         "dirigez vers l'exterieur de la piece.");
                     Game.Transition<PremierePiece>();
                     break;
