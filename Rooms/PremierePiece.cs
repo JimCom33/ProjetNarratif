@@ -19,7 +19,8 @@
                     Game.Transition<PremierEtage>();
                     break;
                 case "ascenceur":
-                    Console.WriteLine("");                    
+                    Console.WriteLine("Vous rentez dans l'ascenceur.");   
+                    Game.Transition<Ascenceur>();
                     break;
                 case "porte":
                     if (isKeyCollected)

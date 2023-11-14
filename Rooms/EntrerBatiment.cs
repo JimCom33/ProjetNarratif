@@ -12,7 +12,7 @@ namespace ProjetNarratif.Rooms
         {
             Game.alarmStopwatch.Start();
             return
-                @"Une alarme se met à sonner.
+                @"Une alarme se met à sonner. Vous avez une minute pour la désactiver avant que la police sois avisé.
 Vous devez vite trouver le code pour la désactiver.
 Un [babillard] se trouve au fond de la pièce.
 Un [telephone] est sur le bureau d'entrer.

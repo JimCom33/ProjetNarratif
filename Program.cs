@@ -6,7 +6,8 @@ game.Add(new DevantBatiment());
 game.Add(new EntrerBatiment());
 game.Add(new PremierePiece());
 game.Add(new PremierEtage());
-
+game.Add(new Ascenceur());
+game.Add(new SousSol());
 Game.stopwatch.Start();
 
 while (!game.IsGameOver())
