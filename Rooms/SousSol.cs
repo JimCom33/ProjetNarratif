@@ -29,19 +29,22 @@ Vous pouvez faire demi tour et retourner dans l'[ascenseur]."
                 case "porte":
                     Console.WriteLine(@"Vous courez a tout vitesse vers la porte en espérant que ce soit la porte de sortie.
 Sur votre chemin les chambres sont de plus en plus occupée par différents animaux étranges.
-De plus en plus affamé. Êtes vous sur de vouloir continuer dans le couloir? oui ou non.");
-                    if (choice == "oui")
-                    {
-                        Console.WriteLine(@"Vous arrivez presque à la porte mais les animaux commence a se transformer en humain.
+De plus en plus affamé.
+ Vous arrivez presque à la porte mais les animaux commence a se transformer en humain.
 Des humains transformer. Qui semblent être génétiquement modifier.
-Très dangereux. Tous essayant de sortir de leurs chambres respective en frappant dans la vitre");
-                    }
+Très dangereux. Tous essayant de sortir de leurs chambres respective en frappant dans la vitre
+Vous arrivez à la porte. Elle est complètement barré. Vous devez donc refaire tout le couloir et retourner dans l'ascenseur.");
+                    Game.Transition<Ascenceur>();                                                    
                     break;
 
 
                 case "ascenceur":
                     Console.WriteLine("Vous courez vers l'ascenceur");
                     Game.Transition<Ascenceur>();
+                    break;
+
+                default:
+                    Console.WriteLine("Commande invalide.");
                     break;
             }
         }
