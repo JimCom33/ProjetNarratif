@@ -1,4 +1,5 @@
 ﻿using ProjetNarratif.Rooms;
+using System.Diagnostics;
 
 namespace ProjetNarratif
 {
@@ -9,6 +10,24 @@ namespace ProjetNarratif
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
+
+        internal static int hp = 5;
+        internal static Stopwatch stopwatch = new Stopwatch();
+        internal static Stopwatch alarmStopwatch = new Stopwatch();
+
+        internal static void LoseHP()
+        {
+            hp--;
+            if (hp <= 0)
+            {
+                Console.WriteLine("You died");
+                Game.Finish();
+            }
+            else
+            {
+                Console.WriteLine($"Tu prend des dégats. Pv restant = {hp}/ 5");
+            }
+        }
 
         internal void Add(Room room)
         {

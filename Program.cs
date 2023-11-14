@@ -7,6 +7,8 @@ game.Add(new EntrerBatiment());
 game.Add(new PremierePiece());
 game.Add(new PremierEtage());
 
+Game.stopwatch.Start();
+
 while (!game.IsGameOver())
 {
     Console.WriteLine("--");
@@ -14,7 +16,10 @@ while (!game.IsGameOver())
     string? choice = Console.ReadLine()?.ToLower() ?? "";
     Console.Clear();
     game.ReceiveChoice(choice);
+    
 }
 
-Console.WriteLine("FIN");
+
+double totalMinutes = Game.stopwatch.Elapsed.Minutes;
+Console.WriteLine($"FIN {totalMinutes} m");
 Console.ReadLine();

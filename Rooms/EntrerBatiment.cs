@@ -1,19 +1,34 @@
-﻿namespace ProjetNarratif.Rooms
+﻿using ProjetNarratif;
+
+namespace ProjetNarratif.Rooms
 {
     internal class EntrerBatiment : Room
     {
         internal static bool mirorIsCovered;
 
-        internal override string CreateDescription() =>
-@"Une alarme se met à sonner.
+        
+
+        internal override string CreateDescription()
+        {
+            Game.alarmStopwatch.Start();
+            return
+                @"Une alarme se met à sonner.
 Vous devez vite trouver le code pour la désactiver.
 Un [babillard] se trouve au fond de la pièce.
 Un [telephone] est sur le bureau d'entrer.
 Vous pouvez tenter le code.
 ";
+        }
+
+        
 
         internal override void ReceiveChoice(string choice)
         {
+            if(Game.alarmStopwatch.Elapsed.TotalMinutes > 1)
+            {
+                Game.Finish();
+                return;
+            }
             switch (choice)
             {
                 case "babillard":
