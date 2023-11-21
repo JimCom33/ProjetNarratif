@@ -34,13 +34,13 @@ De plus en plus affamé.
 Des humains transformer. Qui semblent être génétiquement modifier.
 Très dangereux. Tous essayant de sortir de leurs chambres respective en frappant dans la vitre
 Vous arrivez à la porte. Elle est complètement barré. Vous devez donc refaire tout le couloir et retourner dans l'ascenseur.");
-                    Game.Transition<Ascenceur>();                                                    
+                    Game.Transition<Ascenseur>();                                                    
                     break;
 
 
-                case "ascenceur":
-                    Console.WriteLine("Vous courez vers l'ascenceur");
-                    Game.Transition<Ascenceur>();
+                case "ascenseur":
+                    Console.WriteLine("Vous courez vers l'ascenseur");
+                    Game.Transition<Ascenseur>();
                     break;
 
                 default:

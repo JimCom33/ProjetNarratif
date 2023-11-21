@@ -18,9 +18,9 @@
                     Console.WriteLine("Vous décidez de prendre les escaliers qui vous mène à l'étage du haut.");
                     Game.Transition<PremierEtage>();
                     break;
-                case "ascenceur":
-                    Console.WriteLine("Vous rentez dans l'ascenceur.");   
-                    Game.Transition<Ascenceur>();
+                case "ascenseur":
+                    Console.WriteLine("Vous rentez dans l'ascenseur.");   
+                    Game.Transition<Ascenseur>();
                     break;
                 case "porte":
                     if (isKeyCollected)
