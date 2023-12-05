@@ -9,7 +9,7 @@ namespace ProjetNarratif.Rooms
     internal class Ascenseur : Room
     {
         internal override string CreateDescription() => @"l'ascenseur est tout sauf normal.
-Les seuls options sont le sous-sol [ss] ou [-100]
+Les seuls options sont le sous-sol [ss] ou [-100] ou [premiere] etage
 Vous pouvez aussi [sortir] de l'ascenceur";
 
 
@@ -29,6 +29,10 @@ Vous pouvez aussi [sortir] de l'ascenceur";
 
                 case "sortir":
                     Console.WriteLine("Vous sortez de l'ascenseur");
+                    Game.Transition<PremierePiece>();
+                    break;
+
+                case "premiere":
                     Game.Transition<PremierePiece>();
                     break;
             }

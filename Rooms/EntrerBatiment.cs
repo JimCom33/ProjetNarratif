@@ -26,7 +26,7 @@ Vous pouvez tenter le code.
         {
             if(Game.alarmStopwatch.Elapsed.TotalMinutes > 1)
             {
-                Game.Finish();
+                Game.Finish1();
                 return;
             }
             switch (choice)

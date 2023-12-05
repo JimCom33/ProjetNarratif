@@ -8,9 +8,10 @@ namespace ProjetNarratif.Rooms
 {
     internal class PieceEtage : Room
     {
+        internal static bool antidote;
+
         internal override string CreateDescription() =>
-@"La panique commence a s'emparer de vous. 
-Vous ne savez plus quoi faire.
+@"Vous etes intriguez.
 Vous pouvez aller voir le [garde].
 Tentez de sortir par la [fenetre] et fuir.
 Ou retourner en [bas].
@@ -24,7 +25,34 @@ Ou retourner en [bas].
             switch (choice)
             {
                 case "garde":
-                    Console.WriteLine("Rien de spécial sur le garde... seulement sa tête qui a été complètement manger par quelque chose ou quelqu'un...?");
+
+                    if (antidote)
+                    {
+                        if (Game.stopwatch.Elapsed.TotalMinutes > 20)
+                        {
+                            Console.WriteLine(@"Vous n'avez pas eu le temps de sauver le garde il est donc mort...
+et vous le serez probablement bientot.");
+                            Game.Finish();
+                        }
+                        else
+                        {
+                            Console.WriteLine(@" Vous donnez l'antidote au garde. Il se sent beaucoup mieux et vous aide a soritr de ce malheur.
+Vous etes maintenant de retour dans votre appartement et vous n'avez pas les mots
+pour decire ce qui vien de se passer.");
+                            Game.Finish();
+                        }
+                        
+                    }
+                    else
+                    {
+                        Game.stopwatch.Start();
+                        Console.WriteLine(@"Le garde est encore en vie. Il vous dit : 
+aider moi svp... je vais bientot mourir. J'ai ete empoisonné par le savant fou.
+Vous devez a tout pris trouver avec quoi il ma empoisonné et concocter l'antidote.
+Je suis le seul a avoir le code pour sortir de ce batiment.
+Si vous ne me sauvez pas la vie... vous y serez pris a tout jamais.
+Depechez vous. Il me reste moins de 20 minutes avant de mourir.");
+                    }
                     break;
 
                 case "fenetre":

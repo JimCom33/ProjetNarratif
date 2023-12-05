@@ -9,6 +9,11 @@ game.Add(new PremierEtage());
 game.Add(new Ascenseur());
 game.Add(new SousSol());
 game.Add(new PieceEtage());
+game.Add(new PieceSousSol());
+game.Add(new _100());
+game.Add(new cahier());
+game.Add(new distributeur());
+game.Add(new balance());
 Game.stopwatch.Start();
 
 while (!game.IsGameOver())

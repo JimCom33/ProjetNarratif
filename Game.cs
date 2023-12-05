@@ -10,6 +10,7 @@ namespace ProjetNarratif
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
+        
 
         internal static int hp = 5;
         internal static Stopwatch stopwatch = new Stopwatch();
@@ -54,6 +55,13 @@ namespace ProjetNarratif
         internal static void Finish()
         {
             isFinished = true;
+        }
+
+        internal static void Finish1()
+        {
+            isFinished = true;
+            Console.WriteLine(@"Vous n'avez pas reussi a desamorcer l'alarme a temps.
+Les autorie ont ete aviser.");
         }
 
         internal void CheckTransition()

@@ -24,8 +24,8 @@ Vous pouvez aussi retourner en [bas].
             {
                 case "piece":
                     Console.WriteLine("Vous approchez de la piece sans faire de bruit..." +
-                        " vous trouver ce qui semble entre un gardien de sécurité mort... " +
-                        "la tête complètement dévoré.");
+                        " vous trouver ce qui semble entre un gardien de sécurité couché au sol... ");
+                        
                     Game.Transition<PieceEtage>();
                     break;                
 
