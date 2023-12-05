@@ -24,13 +24,13 @@ Vous pouvez revenir au milieu de la [piece]";
                 case "57116":
                     Console.WriteLine("Vous obtenez ANTI");
                     anti = true;
-                    Game.Transition<_100>();
+                    
                     break;
 
                 case "619":
                     Console.WriteLine("Vous obtenez DOTE");
                     dote = true;
-                    Game.Transition<_100>();
+                    
                     break;
 
                 case "piece":

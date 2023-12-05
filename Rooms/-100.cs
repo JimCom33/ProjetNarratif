@@ -18,7 +18,8 @@ Il y a un [cahier] avec un tableau periodique au dessu.
 Il y a un [distributeur] automatique avec plusieurs flasque contenant un liquide a l'intérieur
 tous relier a un certain nombre.
 Il y a une [balance] avec de acide acetique, cyanure et de la chlorure d'hydrogène.
-Et un [contenant] vide.";
+Et un [contenant] vide.
+Vous pouvez retourner dans l'[ascenseur]";
 
 
             internal override void ReceiveChoice(string choice)
@@ -49,7 +50,11 @@ Et un [contenant] vide.";
 
                     case "balance":
                     Game.Transition<balance>();
-                        break; 
+                        break;
+
+                    case "ascenseur":
+                        Game.Transition<Ascenseur>();
+                    break;
 
 
                     default:
