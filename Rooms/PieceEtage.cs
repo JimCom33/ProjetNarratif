@@ -8,7 +8,7 @@ namespace ProjetNarratif.Rooms
 {
     internal class PieceEtage : Room
     {
-        internal static bool antidote;
+        
 
         internal override string CreateDescription() =>
 @"Vous etes intriguez.
@@ -26,7 +26,7 @@ Ou retourner en [bas].
             {
                 case "garde":
 
-                    if (antidote)
+                    if (Game.antidote)
                     {
                         if (Game.stopwatch.Elapsed.TotalMinutes > 20)
                         {

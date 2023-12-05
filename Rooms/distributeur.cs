@@ -10,8 +10,7 @@ namespace ProjetNarratif.Rooms
     
     internal class distributeur : Room
     {
-        internal static bool dote;
-        internal static bool anti;
+        
 
         internal override string CreateDescription() => @"Vous pouvez entrer des nombres : 
 Vous pouvez revenir au milieu de la [piece]";
@@ -23,13 +22,13 @@ Vous pouvez revenir au milieu de la [piece]";
             {
                 case "57116":
                     Console.WriteLine("Vous obtenez ANTI");
-                    anti = true;
+                    Game.anti = true;
                     
                     break;
 
                 case "619":
                     Console.WriteLine("Vous obtenez DOTE");
-                    dote = true;
+                    Game.dote = true;
                     
                     break;
 

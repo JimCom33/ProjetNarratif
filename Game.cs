@@ -1,5 +1,6 @@
 ﻿using ProjetNarratif.Rooms;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ProjetNarratif
 {
@@ -10,8 +11,9 @@ namespace ProjetNarratif
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
-        
-
+        internal static bool dote;
+        internal static bool anti;
+        internal static bool antidote;
         internal static int hp = 5;
         internal static Stopwatch stopwatch = new Stopwatch();
         internal static Stopwatch alarmStopwatch = new Stopwatch();

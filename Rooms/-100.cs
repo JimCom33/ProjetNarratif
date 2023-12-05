@@ -10,8 +10,7 @@ namespace ProjetNarratif.Rooms
     internal class _100 : Room
     {
 
-        internal static bool dote;
-        internal static bool anti;
+        
 
         internal override string CreateDescription() => @"A votre arriver vous voyez un laboratoire.
 Il y a un [cahier] avec un tableau periodique au dessu.
@@ -36,10 +35,10 @@ Vous pouvez retourner dans l'[ascenseur]";
                         break;
 
                     case "contenant":
-                    if (anti && dote)
+                    if (Game.anti && Game.dote)
                     {
                         Console.WriteLine("Vous mixer les deux substance et vous obtenez ANTIDOTE");
-                        antidote = true;
+                        Game.antidote = true;
                     }
                     else
                     {
