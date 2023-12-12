@@ -14,6 +14,7 @@ game.Add(new _100());
 game.Add(new cahier());
 game.Add(new distributeur());
 game.Add(new balance());
+game.Add(new Porte());
 Game.stopwatch.Start();
 
 while (!game.IsGameOver())

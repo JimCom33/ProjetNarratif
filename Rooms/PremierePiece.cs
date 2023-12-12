@@ -23,14 +23,8 @@
                     Game.Transition<Ascenseur>();
                     break;
                 case "porte":
-                    if (isKeyCollected)
-                    {
-                        Console.WriteLine("Vous débarer la porte et entrer à l'interieur.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("La porte est barré.");
-                    }
+                    Console.WriteLine("Vous entrez dans la piece");
+                    Game.Transition<Porte>();
                     break;
 
                 default:
